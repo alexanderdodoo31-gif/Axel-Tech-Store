@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axel Tech Store</title>
+    <!-- External CSS link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="#">
+                <img src="VR user.jpg" alt="Axel Tech Logo" class="logo-img">
+                Axel Tech Store
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <h1>Next-Gen Phones & Accessories</h1>
+            <p>Discover the future of mobile technology today.</p>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products">
+            <h2>Our Quantum Inventory</h2>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1592890288564-76628a30a657?q=80&w=500&auto=format&fit=crop"
+                        alt="HoloPhone X-1">
+                    <h3>HoloPhone X-1</h3>
+                    <p class="price">GH₵1299</p>
+                    <button class="add-to-cart" data-id="1">Add to Cart</button>
+                </article>
+
+                <!-- Product 2 -->
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1601593346740-925612772716?q=80&w=500&auto=format&fit=crop"
+                        alt="Levitation Case">
+                    <h3>Levitation Case</h3>
+                    <p class="price">GH₵89</p>
+                    <button class="add-to-cart" data-id="2">Add to Cart</button>
+                </article>
+
+                <!-- Product 3 -->
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?q=80&w=500&auto=format&fit=crop"
+                        alt="NeuroBuds Pro">
+                    <h3>NeuroBuds Pro</h3>
+                    <p class="price">GH₵249</p>
+                    <button class="add-to-cart" data-id="3">Add to Cart</button>
+                </article>
+
+                <!-- Product 4 -->
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?q=80&w=500&auto=format&fit=crop"
+                        alt="Plasma Charger Node">
+                    <h3>Plasma Charger Node</h3>
+                    <p class="price">GH₵149</p>
+                    <button class="add-to-cart" data-id="4">Add to Cart</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- Cart Section -->
+        <section id="cart" class="cart">
+            <h2>Your Cargo Hold</h2>
+
+            <!-- List of selected items -->
+            <ul id="cart-items">
+                <!-- Dynamic cart list items will appear here -->
+            </ul>
+
+            <div class="cart-summary">
+                <p>Items in cart: <span id="cart-item-count">0</span></p>
+                <p>Total: <span id="cart-total-price">GH₵0.00</span></p>
+                <button id="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Antigravity Tech Store. All rights reserved.</p>
+    </footer>
+
+    <!-- External JavaScript link -->
+    <script src="script.js"></script>
+</body>
+
+</html>
