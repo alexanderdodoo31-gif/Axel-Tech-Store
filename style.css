@@ -397,9 +397,40 @@ nav a:hover {
 
 footer {
     text-align: center;
-    padding: 40px;
+    padding: 50px 20px;
     border-top: 1px solid var(--glass-border);
     color: var(--text-muted);
+    background: rgba(5, 5, 10, 0.8);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.contact-info h3 {
+    color: var(--neon-cyan);
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 20px;
+    width: 100%;
+    max-width: 600px;
 }
 
 /* Responsive Design */
