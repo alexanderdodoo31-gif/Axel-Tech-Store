@@ -4,7 +4,7 @@ const products = [
     { id: 2, name: "Levitation Case", price: 89.99 },
     { id: 3, name: "NeuroBuds Pro", price: 249.99 },
     { id: 4, name: "Plasma Charger Node", price: 149.99 },
-    { id: 5, name: "Samsung Z Fold", price: 25999.00 }
+    { id: 5, name: "Samsung Z Fold", price: 10750.00 }
 ];
 
 let cart = [];
