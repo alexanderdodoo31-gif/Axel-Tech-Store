@@ -5,7 +5,13 @@ const products = [
     { id: 3, name: "NeuroBuds Pro", price: 249.99 },
     { id: 4, name: "Plasma Charger Node", price: 149.99 },
     { id: 5, name: "Samsung Z Fold", price: 10750.00 },
-    { id: 6, name: "iPhone 16", price: 14500.00 }
+    { id: 6, name: "iPhone 16", price: 14500.00 },
+    { id: 7, name: "Quantum Watch S-1", price: 3499.99 },
+    { id: 8, name: "HoloBeacon Mini", price: 899.99 },
+    { id: 9, name: "Neural Link VR", price: 5999.99 },
+    { id: 10, name: "Glass Tablet Ultra", price: 8750.00 },
+    { id: 11, name: "Prism Projection Lens", price: 599.99 },
+    { id: 12, name: "Aero-Magnetic Stand", price: 299.99 }
 ];
 
 let cart = [];
@@ -35,16 +41,44 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Checkout button event
     const checkoutBtn = document.getElementById('checkout-btn');
-    if (checkoutBtn) {
+    const modal = document.getElementById('checkout-modal');
+    const closeBtn = document.querySelector('.close-modal');
+    const checkoutForm = document.getElementById('checkout-form');
+    const modalTotal = document.getElementById('modal-total');
+
+    if (checkoutBtn && modal) {
         checkoutBtn.addEventListener('click', () => {
-            if(cart.length > 0) {
-                alert('Proceeding to hyper-secure checkout... Total: GH₵' + cart.reduce((total, item) => total + (item.price * item.quantity), 0).toFixed(2));
-                // Optional: clear cart after checkout
-                cart = [];
-                updateCartUI();
+            if (cart.length > 0) {
+                const total = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+                modalTotal.textContent = 'GH₵' + total.toLocaleString('en-GH', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+                modal.style.display = 'block';
             } else {
                 alert('Your cargo hold is empty!');
             }
+        });
+    }
+
+    if (closeBtn && modal) {
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+    }
+
+    if (checkoutForm && modal) {
+        checkoutForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            alert(`Thanks for your purchase, ${name}! Your order is being processed.`);
+            cart = [];
+            updateCartUI();
+            modal.style.display = 'none';
+            checkoutForm.reset();
         });
     }
 });
@@ -127,13 +161,13 @@ function updateCartUI() {
             li.innerHTML = `
                 <div class="cart-item-info">
                     <h4>${item.name}</h4>
-                    <p>GH₵${item.price.toFixed(2)}</p>
+                    <p>GH₵${item.price.toLocaleString('en-GH', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
                 </div>
-                <div style="display: flex; align-items: center; gap: 15px;">
-                    <div style="background: rgba(0,0,0,0.5); border-radius: 8px; border: 1px solid var(--glass-border); display: flex; align-items: center; overflow: hidden;">
-                        <button onclick="changeQuantity(${item.id}, -1)" style="padding: 6px 12px; background: transparent; border: none; color: white; cursor:pointer;" onMouseOver="this.style.background='rgba(255,255,255,0.1)'" onMouseOut="this.style.background='transparent'">-</button>
-                        <span style="color: white; padding: 0 10px;">${item.quantity}</span>
-                        <button onclick="changeQuantity(${item.id}, 1)" style="padding: 6px 12px; background: transparent; border: none; color: white; cursor:pointer;" onMouseOver="this.style.background='rgba(255,255,255,0.1)'" onMouseOut="this.style.background='transparent'">+</button>
+                <div class="cart-controls">
+                    <div class="quantity-controls">
+                        <button class="quantity-btn" onclick="changeQuantity(${item.id}, -1)">–</button>
+                        <span class="quantity-val">${item.quantity}</span>
+                        <button class="quantity-btn" onclick="changeQuantity(${item.id}, 1)">+</button>
                     </div>
                     <button class="remove-item" onclick="removeFromCart(${item.id})" title="Remove item">✕</button>
                 </div>
@@ -142,7 +176,7 @@ function updateCartUI() {
         });
     }
 
-    if (totalElement) totalElement.textContent = 'GH₵' + total.toFixed(2);
+    if (totalElement) totalElement.textContent = 'GH₵' + total.toLocaleString('en-GH', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     if (countElement) countElement.textContent = count;
     if (summaryCountElement) summaryCountElement.textContent = count;
 }

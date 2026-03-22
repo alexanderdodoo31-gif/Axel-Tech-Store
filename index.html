@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Axel Tech Store</title>
+    <meta name="description"
+        content="Axel Tech Store - Your destination for next-gen phones, holographic technology, and premium mobile accessories. Experience the future of mobile tech.">
+    <title>Axel Tech Store | Next-Gen Phones & Accessories</title>
     <!-- External CSS link -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -22,10 +24,9 @@
         <nav>
             <ul>
 
-                <li><a href="#phone">Phone</a></li>
-                <li><a href="#location">Location</a></li>
+                <li><a href="#products">Accessories</a></li>
+                <li><a href="#footer-contact">Location</a></li>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
                 <li><a href="#cart">Cart (<span id="cart-count">0</span>)</a></li>
             </ul>
         </nav>
@@ -34,8 +35,12 @@
     <main>
         <!-- Hero Section -->
         <section id="home" class="hero">
-            <h1>Next-Gen Phones & Accessories</h1>
-            <p>Discover the future of mobile technology today.</p>
+            <h1>Powering Your Future with Smart Technology</h1>
+            <p>Discover the latest smartphones, gadgets, and cutting-edge tech designed to simplify your life and keep
+                you ahead of the world.</p>
+            <div class="hero-btns">
+                <a href="#products" class="btn btn-primary">Shop Now</a>
+            </div>
         </section>
 
         <!-- Products Section -->
@@ -45,55 +50,105 @@
                 <!-- Product 1 -->
                 <article class="product-card">
                     <img src="https://images.unsplash.com/photo-1592890288564-76628a30a657?q=80&w=500&auto=format&fit=crop"
-                        alt="HoloPhone X-1">
+                        alt="HoloPhone X-1 - Futuristic high-tech smartphone">
                     <h3>HoloPhone X-1</h3>
-                    <p class="price">GH₵1299</p>
+                    <p class="price">GH₵1,299.99</p>
                     <button class="add-to-cart" data-id="1">Add to Cart</button>
                 </article>
 
                 <!-- Product 2 -->
                 <article class="product-card">
                     <img src="https://images.unsplash.com/photo-1601593346740-925612772716?q=80&w=500&auto=format&fit=crop"
-                        alt="Levitation Case">
+                        alt="Levitation Case - Gravity-defying phone protection">
                     <h3>Levitation Case</h3>
-                    <p class="price">GH₵89</p>
+                    <p class="price">GH₵89.99</p>
                     <button class="add-to-cart" data-id="2">Add to Cart</button>
                 </article>
 
                 <!-- Product 3 -->
                 <article class="product-card">
                     <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?q=80&w=500&auto=format&fit=crop"
-                        alt="NeuroBuds Pro">
+                        alt="NeuroBuds Pro - Brain-interfaced wireless earbuds">
                     <h3>NeuroBuds Pro</h3>
-                    <p class="price">GH₵249</p>
+                    <p class="price">GH₵249.99</p>
                     <button class="add-to-cart" data-id="3">Add to Cart</button>
                 </article>
 
                 <!-- Product 4 -->
                 <article class="product-card">
                     <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?q=80&w=500&auto=format&fit=crop"
-                        alt="Plasma Charger Node">
+                        alt="Plasma Charger Node - High-speed wireless charging station">
                     <h3>Plasma Charger Node</h3>
-                    <p class="price">GH₵149</p>
+                    <p class="price">GH₵149.99</p>
                     <button class="add-to-cart" data-id="4">Add to Cart</button>
                 </article>
 
                 <!-- Product 5 -->
                 <article class="product-card">
                     <img src="https://images.unsplash.com/photo-1610945264803-c22b62d2a7b3?w=500&q=80"
-                        alt="Samsung Z Fold">
+                        alt="Samsung Z Fold - Foldable futuristic display phone">
                     <h3>Samsung Z Fold</h3>
-                    <p class="price">GH₵10750</p>
+                    <p class="price">GH₵10,750.00</p>
                     <button class="add-to-cart" data-id="5">Add to Cart</button>
                 </article>
 
                 <!-- Product 6 -->
                 <article class="product-card">
-                    <img src="https://images.unsplash.com/photo-1695048133142-1a20a5bf616a?w=500&q=80"
-                        alt="iPhone 16">
+                    <img src="iphone16.png" alt="iPhone 16 - Latest premium model in titanium finish">
                     <h3>iPhone 16</h3>
-                    <p class="price">GH₵14500</p>
+                    <p class="price">GH₵14,500.00</p>
                     <button class="add-to-cart" data-id="6">Add to Cart</button>
+                </article>
+
+                <!-- Product 7 -->
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=500&q=80"
+                        alt="Quantum Watch S-1 - Advanced health tracking and holographic display">
+                    <h3>Quantum Watch S-1</h3>
+                    <p class="price">GH₵3,499.99</p>
+                    <button class="add-to-cart" data-id="7">Add to Cart</button>
+                </article>
+
+                <!-- Product 8 -->
+                <article class="product-card">
+                    <img src="holobeacon.png" alt="HoloBeacon Mini - Portable atmospheric holographic projector">
+                    <h3>HoloBeacon Mini</h3>
+                    <p class="price">GH₵899.99</p>
+                    <button class="add-to-cart" data-id="8">Add to Cart</button>
+                </article>
+
+                <!-- Product 9 -->
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=500&q=80"
+                        alt="Neural Link VR - Deeply immersive neural-interfaced virtual reality">
+                    <h3>Neural Link VR</h3>
+                    <p class="price">GH₵5,999.99</p>
+                    <button class="add-to-cart" data-id="9">Add to Cart</button>
+                </article>
+
+                <!-- Product 10 -->
+                <article class="product-card">
+                    <img src="glass_tablet.png"
+                        alt="Glass Tablet Ultra - Revolutionary transparent glass display tablet">
+                    <h3>Glass Tablet Ultra</h3>
+                    <p class="price">GH₵8,750.00</p>
+                    <button class="add-to-cart" data-id="10">Add to Cart</button>
+                </article>
+
+                <!-- Product 11 -->
+                <article class="product-card">
+                    <img src="prism_lens.png" alt="Prism Projection Lens - Advanced magnetic levitation phone mount">
+                    <h3>Prism Projection Lens</h3>
+                    <p class="price">GH₵599.99</p>
+                    <button class="add-to-cart" data-id="11">Add to Cart</button>
+                </article>
+
+                <!-- Product 12 -->
+                <article class="product-card">
+                    <img src="aero_stand.png" alt="Aero-Magnetic Stand - Self-charging energy-harvesting phone wrap">
+                    <h3>Aero-Magnetic Stand</h3>
+                    <p class="price">GH₵299.99</p>
+                    <button class="add-to-cart" data-id="12">Add to Cart</button>
                 </article>
             </div>
         </section>
@@ -116,18 +171,44 @@
     </main>
 
     <!-- Footer -->
-    <footer>
+    <footer id="footer-contact">
         <div class="footer-content">
             <div class="contact-info">
                 <h3>Contact Us</h3>
-                <p>📍 Location: Pokuase Kwabenya Road, Accra - Ghana</p>
-                <p>📞 Phone: +233 200 170 731</p>
+                <p> <span class="sr-only">Location:</span>Location: Pokuase Kwabenya Road, Accra - Ghana</p>
+                <p> <span class="sr-only">Phone:</span> Phone: +233 200 170 731</p>
             </div>
             <div class="footer-copyright">
                 <p>&copy; 2026 Axel Tech Store. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Complete Your Acquisition</h2>
+            <form id="checkout-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Hyper-Secure Email</label>
+                    <input type="email" id="email" required placeholder="name@domain.com">
+                </div>
+                <div class="form-group">
+                    <label for="address">Delivery Coordinates</label>
+                    <input type="text" id="address" required placeholder="Pokuase Road, Accra">
+                </div>
+                <div class="modal-summary">
+                    <p>Total Amount: <span id="modal-total">GH₵0.00</span></p>
+                </div>
+                <button type="submit" class="submit-btn">Finalize Order</button>
+            </form>
+        </div>
+    </div>
 
     <!-- External JavaScript link -->
     <script src="script.js"></script>
